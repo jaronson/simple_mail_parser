@@ -14,20 +14,21 @@ Gem::Specification.new do |s|
   s.email = %q{jparonson@gmail.com}
   s.extra_rdoc_files = [
     "LICENSE.txt",
-    "README.rdoc"
+    "README.md"
   ]
   s.files = [
     ".document",
     "Gemfile",
     "Gemfile.lock",
     "LICENSE.txt",
-    "README.rdoc",
+    "README.md",
     "Rakefile",
     "VERSION",
     "lib/email/header_tuple.rb",
     "lib/email/message.rb",
     "lib/email/parser.rb",
     "lib/simple_mail_parser.rb",
+    "simple_mail_parser.gemspec",
     "test/helper.rb",
     "test/test_simple_mail_parser.rb"
   ]
