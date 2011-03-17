@@ -15,14 +15,11 @@ Jeweler::Tasks.new do |gem|
   gem.name = "simple_mail_parser"
   gem.homepage = "http://github.com/jaronson/simple_mail_parser"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{ Quick and dirty ruby email parser }
+  gem.description = %Q{ Library for quickly parsing RFC 5322 emails }
   gem.email = "jparonson@gmail.com"
   gem.authors = ["Josh Aronson"]
-  # Include your dependencies below. Runtime dependencies are required when using your gem,
-  # and development dependencies are only needed for development (ie running rake tasks, tests, etc)
-  #  gem.add_runtime_dependency 'jabber4r', '> 0.1'
-  #  gem.add_development_dependency 'rspec', '> 1.2.3'
+  gem.add_runtime_dependency 'json'
 end
 Jeweler::RubygemsDotOrgTasks.new
 
