@@ -15,4 +15,7 @@ $LOAD_PATH.unshift(File.dirname(__FILE__))
 require 'simple_mail_parser'
 
 class Test::Unit::TestCase
+  def email_fixture(name)
+    File.read(File.dirname(__FILE__) + "/fixtures/#{name}.eml")
+  end
 end
