@@ -104,19 +104,18 @@ module Email
 
       content = content.split("--#{boundary}\r\n").collect{|c| c unless c.nil? || c.empty? }.compact
       0.upto(content.size-1) do |i|
-        c = parse_part(content[i])
-        c = c.gsub("--#{boundary}", "")
-        content[i] = c
+        content[i] = parse_part(content[i], :boundary => boundary)
       end
       return content
     end
 
-    def parse_part(content)
+    def parse_part(content, opts={})
       msg = Message.new
       content = content.split("\r\n\r\n", 2)
       msg.headers  = parse_header_block(content[0])
       if content.size == 2
-        msg.body = parse_body_block(content[1], msg.headers)
+        body = parse_body_block(content[1], msg.headers)
+        msg.body = opts[:boundary] ? body.gsub("--#{opts[:boundary]}","") : body
       else
         msg.body = ''
       end
