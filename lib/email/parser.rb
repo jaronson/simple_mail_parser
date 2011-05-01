@@ -105,6 +105,7 @@ module Email
       content = content.split("--#{boundary}\r\n").collect{|c| c unless c.nil? || c.empty? }.compact
       0.upto(content.size-1) do |i|
         content[i] = parse_part(content[i])
+        content[i] = content[i].gsub("--#{boundary}", "")
       end
       return content
     end
