@@ -83,7 +83,7 @@ module Simplemail
       end
       case headers['content-type'].value
         when 'text/plain', 'text/html'
-          return content.unpack('M') if headers['content-transfer-encoding'] == 'quoted-printable'
+          return content.gsub(/\r\n/,"\n").unpack('M') if headers['content-transfer-encoding'] == 'quoted-printable'
           return content
         when 'multipart/mixed', 'multipart/alternative'
           content = parse_multitype(content, headers['content-type'].opts['boundary'])
