@@ -1,4 +1,4 @@
-module Email
+module Simplemail
   class Parser
     attr_accessor :content
     attr_reader :message

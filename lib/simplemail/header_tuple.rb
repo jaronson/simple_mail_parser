@@ -1,4 +1,4 @@
-module Email
+module Simplemail
 class HeaderTuple
   attr_accessor :value, :opts
   def initialize(opts={})

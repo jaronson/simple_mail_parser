@@ -1,5 +1,5 @@
 require 'rubygems'
 require 'json'
-require 'email/parser'
-require 'email/message'
-require 'email/header_tuple'
+require 'simplemail/parser'
+require 'simplemail/message'
+require 'simplemail/header_tuple'

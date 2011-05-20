@@ -1,4 +1,4 @@
-module Email
+module Simplemail
   class Message
     attr_accessor :headers, :body
 
