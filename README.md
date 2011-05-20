@@ -2,14 +2,14 @@
 
 ## Usage
 
-Use the class methods to parse emails and return an Email::Message object:
+Use the class methods to parse emails and return an Simplemail::Message object:
 
-    Email::Parser.message_from_string(content) 
-    Email::Parser.message_from_file(File.open('email.eml'))
+    Simplemail::Parser.message_from_string(content) 
+    Simplemail::Parser.message_from_file(File.open('email.eml'))
 
 Or, take the long approach and create a new parser
 
-    parser = Email::Parser.new
+    parser = Simplemail::Parser.new
     parser.content = File.read('email.eml')
     msg = parser.parse
 
